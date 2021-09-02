@@ -1,18 +1,20 @@
-const path = require('path');
 const http = require('http');
+const path = require('path');
 
-const adminRoutes = require('./routes/admin');
+const adminData = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 
 const express = require('express');
+const expressHbl = require('express-handlebars');
 
 const app = express();
 
-app.set('view engine', 'ejs');
+app.engine('hbs', expressHbl({layoutsDir: 'views/layouts', defaultLayout: 'main-layout', extname: 'hbs'}));
+app.set('view engine', 'hbs')
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(adminRoutes);
+app.use(adminData.routes);
 app.use(shopRoutes);
 
 app.use((req, res, next) => {
