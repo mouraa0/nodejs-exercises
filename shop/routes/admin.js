@@ -2,7 +2,7 @@ const path = require('path');
 
 const express = require('express');
 
-const productsController = require('../controllers/products');
+const adminController = require('../controllers/admin');
 
 const bodyParser = require('body-parser');
 
@@ -10,9 +10,11 @@ const router = express.Router();
 
 router.use(bodyParser.urlencoded({extended: false}));
 
-router.get('/add-products', productsController.getAddProducts);
+router.get('/admin/add-products', adminController.getAddProducts);
 
-router.post('/add-products', productsController.postAddProducts);
+router.get('/admin/products', adminController.getProducts);
+
+router.post('/admin/add-products', adminController.postAddProducts);
 
 
 module.exports = router;
