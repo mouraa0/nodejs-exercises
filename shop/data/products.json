@@ -1,1 +1,1 @@
-[{"title":"Book"}]
+[{"id": "234","title":"Book","imageUrl":"https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png","description":"A great book!","price":"20.00"},{"id":"123","title":"Another Book","imageUrl":"https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png","description":"Yeah","price":"20.00"},{"id":"12","title":"Third Book","imageUrl":"https://cdn.pixabay.com/photo/2016/03/31/20/51/book-1296045_960_720.png","description":"what","price":"20.15"}]
